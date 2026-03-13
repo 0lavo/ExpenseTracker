@@ -25,6 +25,23 @@ public class ExpenseController {
         }
     }
 
+    public void summary() {
+        double totalExpenses = 0;
 
+        for (Expense e : expenseList) {
+            totalExpenses += e.getAmount();
+        }
 
+        System.out.println("The total of expenses is: " + totalExpenses);
+    }
+
+    public void summary(Integer month) {
+        double totalExpenses = 0;
+
+        for (Expense e : expenseList) {
+            if (e.getDate().getMonthValue() == month) totalExpenses += e.getAmount();
+        }
+
+        System.out.println("The total of expenses is: " + totalExpenses);
+    }
 }

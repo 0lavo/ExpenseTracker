@@ -11,7 +11,8 @@ import picocli.CommandLine.Command;
         subcommands = {
                 AddCommand.class,
                 DeleteCommand.class,
-                ListCommand.class
+                ListCommand.class,
+                SummaryCommand.class
         }
 )
 public class ExpenseTrackerCommand implements Runnable{
