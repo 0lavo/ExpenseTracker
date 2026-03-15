@@ -1,13 +1,12 @@
 package org.example.CLI;
 
-import org.example.ExpenseController;
 import picocli.CommandLine.Command;
-import picocli.CommandLine.Parameters;
+import picocli.CommandLine.Option;
 
 @Command(name = "summary", description = "See a summary of your expenses")
 public class SummaryCommand extends AbstractCommand implements Runnable{
 
-    @Parameters(index = "0", arity = "0..1", description = "The month you want to see the summary of expenses")
+    @Option(names = {"--mounth", "-m"}, description = "The month you want to see the summary of expenses")
     private Integer month;
 
     @Override

@@ -1,12 +1,12 @@
 package org.example.CLI;
 
 import picocli.CommandLine.Command;
-import picocli.CommandLine.Parameters;
+import picocli.CommandLine.Option;
 
 @Command(name = "delete", description = "Delete a expense by id")
 public class DeleteCommand extends AbstractCommand implements Runnable {
 
-    @Parameters(index = "0", description = "The id of deleted expense")
+    @Option(names = "--id", required = true, description = "The id of deleted expense")
     private int id;
 
     @Override
