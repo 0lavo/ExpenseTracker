@@ -1,5 +1,7 @@
 package org.example;
 
+import picocli.CommandLine;
+
 import java.util.ArrayList;
 
 public class ExpenseController {
@@ -42,6 +44,10 @@ public class ExpenseController {
             if (e.getDate().getMonthValue() == month) totalExpenses += e.getAmount();
         }
 
-        System.out.println("The total of expenses is: " + totalExpenses);
+        System.out.println("The total of the month " + month + " expenses is: " + totalExpenses);
+    }
+
+    public ArrayList<Expense> getExpenseList() {
+        return expenseList;
     }
 }

@@ -1,7 +1,10 @@
 package org.example.CLI;
 
+import org.example.Expense;
 import picocli.CommandLine.Command;
 import picocli.CommandLine.Parameters;
+
+import java.util.ArrayList;
 
 @Command(name = "add", description = "Adds a new expense")
 public class AddCommand extends AbstractCommand implements Runnable{

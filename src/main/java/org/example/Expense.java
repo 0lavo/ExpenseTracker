@@ -20,14 +20,21 @@ public class Expense {
         this.date = LocalDate.now();
     }
 
+    public Expense(String[] values) {
+        idCount++;
+        this.id = Integer.parseInt(values[0]);
+        this.amount = Double.parseDouble(values[1]);
+        this.description = values[2];
+        this.date = LocalDate.parse(values[3]);
+    }
+
     @Override
     public String toString() {
-        return "{" +
-                "id=" + id +
+        return
+                id +
                 "," + amount +
-                "," + description + '\'' +
-                "," + date +
-                '}';
+                "," + description +
+                "," + date;
     }
 
     //Get and Setters

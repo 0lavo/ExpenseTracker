@@ -17,6 +17,7 @@ public class Main {
             String input = scanner.nextLine().trim();
 
             if (input.equalsIgnoreCase("exit")) {
+
                 System.out.println("Goodbye!");
                 break;
             }
